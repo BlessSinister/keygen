@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #key {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            padding-top: 10px;
+            margin: auto;
+        }
+
+        p {
+            padding-top: 58px;
+            padding-left: 28px;
+            font-size: 23px;
+
+        }
+    </style>
+    <div id="key">
+        <p id="n"></p>
+    </div>
+    <script>
+        let pass = ''
+        let arr = []
+        function gen(a, b) {
+            for (let i = 0; i < a; i++) {
+                pass += b[Math.floor(Math.random() * b.length)]
+            } arr.push(pass)
+        } gen(12, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890')
+        console.log(arr)
+        document.getElementById('n').innerHTML = pass
+    </script>
+</body>
+
+</html>
